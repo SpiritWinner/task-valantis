@@ -41,6 +41,8 @@ export const useProducts = (filters, currentPage) => {
 
 
     const fetchProducts = async () => {
+      setIsLoading(true);
+
         try {
           const isFiltering = Object.values(filters).some((value) => value !== undefined && value !== '');
           const ids = isFiltering ? await fetchFilteredProducts() : await fetchAllProductsIds();

@@ -57,7 +57,7 @@ function App() {
       />
     </div>
 
-      <ProductList product={products} isLoading={isLoading}/>
+      <ProductList products={products} isLoading={isLoading}/>
 
       <div className='pagination'>
         <button 
