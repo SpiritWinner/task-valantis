@@ -5,50 +5,72 @@
     align-items: center;
     gap: 50px;
     padding-inline: 20px;
-}
+  
+    @media (max-width: 768px) {
+      gap: 30px; // Уменьшаем промежуток между элементами на маленьких экранах
+      padding-inline: 10px; // Уменьшаем боковые отступы на маленьких экранах
+    }
+  }
+  
+  .search {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 
-.search {
     &__input {
-        margin-right: 10px;
-        padding: 8px 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        transition: border-color 0.3s ease-in-out;
-
-        &:focus {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: border-color 0.3s ease-in-out;
+  
+      &:focus {
         outline: none;
         border-color: #007bff;
         box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
-        }
-
-        &::placeholder {
+      }
+  
+      &::placeholder {
         color: #999;
         font-style: italic;
-        }
+      }
+  
+      @media (max-width: 768px) {
+        width: 60vw;
+      }
     }
-}
 
-.pagination {
-    &__button {
-        margin-right: 10px;
-        margin-bottom: 30px;
-        padding: 8px 16px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease-in-out;
-    
-        &:hover {
-          background-color: #0056b3;
-        }
-    
-        &:disabled {
-          background-color: #ccc;
-          cursor: not-allowed;
-        }
+    @media (max-width: 768px) {
+        flex-direction: column;
     }
-}
+  }
+  
+  .pagination {
+    &__button {
+      margin-right: 10px;
+      margin-bottom: 30px;
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+  
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+  
+      @media (max-width: 768px) {
+        font-size: 14px; // Уменьшаем размер шрифта кнопок на маленьких экранах
+        padding: 6px 12px; // Уменьшаем внутренние отступы кнопок
+        margin-bottom: 20px; // Уменьшаем отступ снизу
+      }
+    }
+  }
