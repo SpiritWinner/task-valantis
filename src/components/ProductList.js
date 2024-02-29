@@ -6,7 +6,11 @@ const ProductList = ({products, isLoading}) => {
   return (
     <>
       {isLoading ? (
-        <MyLoader />
+        <div className='product-list'>
+          {Array.from({ length: 10 }, (_, index) => (
+            <MyLoader key={index} />
+          ))}
+        </div>
       ) : products.length > 0 ? (
         <div className='product-list'>
           {products.map((product) => (

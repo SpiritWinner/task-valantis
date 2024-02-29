@@ -1,50 +1,24 @@
 import React from "react"
 import ContentLoader from "react-content-loader"
 
-const MyLoader = (props) => (
-<ContentLoader viewBox="0 0 1700 900" height="90%" width="100%" {...props}>
-    <rect x="10" y="20" rx="10" ry="10" width="320" height="325" />
-    <rect x="10" y="375" rx="0" ry="0" width="320" height="18" />
-    <rect x="10" y="400" rx="0" ry="0" width="190" height="20" />
+const MyLoader = () => (
 
-    <rect x="350" y="20" rx="10" ry="10" width="320" height="325" />
-    <rect x="350" y="375" rx="0" ry="0" width="320" height="18" />
-    <rect x="350" y="400" rx="0" ry="0" width="190" height="20" />
-
-    <rect x="690" y="20" rx="10" ry="10" width="320" height="325" />
-    <rect x="690" y="375" rx="0" ry="0" width="320" height="18" />
-    <rect x="690" y="400" rx="0" ry="0" width="190" height="20" />
-    
-    <rect x="1030" y="20" rx="10" ry="10" width="320" height="325" />
-    <rect x="1030" y="375" rx="0" ry="0" width="320" height="18" />
-    <rect x="1030" y="400" rx="0" ry="0" width="320" height="20" />
-
-    <rect x="1370" y="20" rx="10" ry="10" width="320" height="325" />
-    <rect x="1370" y="375" rnpx="0" ry="0" width="320" height="18" />
-    <rect x="1370" y="400" rx="0" ry="0" width="190" height="20" />
-
-
-    <rect x="10" y="465" rx="10" ry="10" width="320" height="325" />
-    <rect x="10" y="820" rx="0" ry="0" width="320" height="18" />
-    <rect x="10" y="845" rx="0" ry="0" width="190" height="20" />
-
-    <rect x="350" y="465" rx="10" ry="10" width="320" height="325" />
-    <rect x="350" y="820" rx="0" ry="0" width="320" height="18" />
-    <rect x="350" y="845" rx="0" ry="0" width="190" height="20" />
-
-    <rect x="690" y="465" rx="10" ry="10" width="320" height="325" />
-    <rect x="690" y="820" rx="0" ry="0" width="320" height="18" />
-    <rect x="690" y="845" rx="0" ry="0" width="190" height="20" />
-    
-    <rect x="1030" y="465" rx="10" ry="10" width="320" height="325" />
-    <rect x="1030" y="820" rx="0" ry="0" width="320" height="18" />
-    <rect x="1030" y="845" rx="0" ry="0" width="320" height="20" />
-
-    <rect x="1370" y="465" rx="10" ry="10" width="320" height="325" />
-    <rect x="1370" y="820" rx="0" ry="0" width="320" height="18" />
-    <rect x="1370" y="845" rx="0" ry="0" width="190" height="20" />
-
-  </ContentLoader>
+  <ContentLoader 
+  speed={2}
+  width={350}
+  height={440}
+  viewBox="0 0 350 450"
+  backgroundColor="#ecebeb"
+  foregroundColor="#f3f3f3"
+>
+  <rect x="25" y="36" rx="10" ry="10" width="315" height="236" /> 
+  <circle cx="476" cy="528" r="83" /> 
+  <rect x="30" y="410" rx="8" ry="8" width="289" height="17" /> 
+  <rect x="30" y="377" rx="10" ry="10" width="162" height="24" /> 
+  <rect x="29" y="299" rx="10" ry="10" width="128" height="24" /> 
+  <rect x="31" y="334" rx="8" ry="8" width="289" height="13" /> 
+  <rect x="30" y="355" rx="8" ry="8" width="289" height="13" />
+</ContentLoader>
 )
 
 export default MyLoader
