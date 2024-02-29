@@ -9,40 +9,41 @@ export const useProducts = (filters, currentPage) => {
   useEffect(() => {
 
     const fetchFilteredProducts = async () => {
-        const params = {
-            action: 'filter',
-            params: { 
-              ...filters,
-            },
-        };
+      const params = {
+          action: 'filter',
+          params: { 
+            ...filters,
+          },
+      };
 
-        const response = await api.post('/', params);
-        const ids = response.data.result.slice(0 , limit); 
-
-        return ids;
+      const response = await api.post('/', params);
+      return response.data.result.slice(0 , limit); 
     };
   
 
     const fetchAllProductsIds = async () => {
-        const response = await api.post('/', {
-          action: 'get_ids',
-          params: { limit: limit, offset: currentPage * limit },
-        });
-        return response.data.result; 
+      const response = await api.post('/', {
+        action: 'get_ids',
+        params: {
+          limit: limit, 
+          offset: currentPage * limit 
+        },
+      });
+
+      return response.data.result; 
     };
 
     const fetchProductsDetails = async (ids) => {
-        const detailsResponse = await api.post('/', {
-          action: 'get_items',
-          params: { ids },
-        });
-        return detailsResponse.data.result;
+      const detailsResponse = await api.post('/', {
+        action: 'get_items',
+        params: { ids },
+      });
+      
+      return detailsResponse.data.result;
     };
-
 
     const fetchProducts = async () => {
       setIsLoading(true);
-
         try {
           const isFiltering = Object.values(filters).some((value) => value !== undefined && value !== '');
           const ids = isFiltering ? await fetchFilteredProducts() : await fetchAllProductsIds();
@@ -60,7 +61,8 @@ export const useProducts = (filters, currentPage) => {
             setProducts([]);
           }
         } catch (error) {
-          console.error('Ошибка при получении данных:', error);
+          console.error('Ошибка при получении данных:', error.response.status);
+          setTimeout(() => fetchProducts(), 1000);
         } finally {
           setIsLoading(false);
         }
