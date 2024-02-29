@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/task-valantis-jewelry/static/css/main.00a7cc72.css",
+    "main.js": "/task-valantis-jewelry/static/js/main.5a325e90.js",
+    "static/media/rings.png": "/task-valantis-jewelry/static/media/rings.f5ccc252f3a16a75a72a.png",
+    "index.html": "/task-valantis-jewelry/index.html",
+    "main.00a7cc72.css.map": "/task-valantis-jewelry/static/css/main.00a7cc72.css.map",
+    "main.5a325e90.js.map": "/task-valantis-jewelry/static/js/main.5a325e90.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00a7cc72.css",
+    "static/js/main.5a325e90.js"
+  ]
+}
