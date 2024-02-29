@@ -1,7 +1,7 @@
 {
   "name": "task-valantis",
   "version": "0.1.0",
-  "homepage": "https://SpiritWinner.github.io/task-valantis-jewelry",
+  "homepage": "http://SpiritWinner.github.io/task-valantis-jewelry",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
