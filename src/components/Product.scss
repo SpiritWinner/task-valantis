@@ -1,0 +1,33 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fbefef;
+  gap: 10px;
+  opacity: .7;
+
+  &-img {
+    margin-inline: auto;
+  }
+
+  &-price {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &-title {
+    text-transform: uppercase;
+  }
+
+  &-id {
+    width: fit-content;
+    font-size: 12px;
+  }
+
+  &:hover {
+    background-color: #f5f5dc;
+    opacity: 1;
+  }
+}
